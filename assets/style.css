@@ -201,3 +201,7 @@ a{color:var(--amber)}
 @media (max-width:700px){.bbar{grid-template-columns:1fr}.bbar .bv{text-align:left}}
 
 .mail{font-size:18px;margin:0}.mail a{color:var(--accent,#e8590c);font-weight:600}
+
+/* map box keeps its own height; it follows the page while the long side column scrolls */
+.mapgrid{align-items:start}.mapbox{position:sticky;top:76px}
+@media (max-width:980px){.mapbox{position:relative;top:auto}}
