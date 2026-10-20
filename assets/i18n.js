@@ -463,3 +463,10 @@ Object.assign(window.I18N.es, { foot_credit: 'OTR-finder es un estudio de <a hre
 Object.assign(window.I18N.en, { area_full: "(of which {n} ha are whole dumps, the rest sit inside larger sites. {c} ha in Chile, {a} ha in a first test in the Andes.)" });
 Object.assign(window.I18N.de, { area_full: "(davon {n} ha ganze Halden, der Rest liegt innerhalb größerer Standorte. {c} ha in Chile, {a} ha in einem ersten Test in den Anden.)" });
 Object.assign(window.I18N.es, { area_full: "(de las cuales {n} ha son vertederos completos, el resto está dentro de sitios mayores. {c} ha en Chile, {a} ha en una primera prueba en los Andes.)" });
+
+Object.assign(window.I18N.en, { tot_title: "Total results so far, including the first test in the Andes", tot_sites: "confirmed dump sites", tot_ha: "hectares of dump sites outlined", tot_checked: "sites checked by a person",
+  tot_note: "Chile: {sc} sites, {hc} ha, {cc} checked. First test in parts of Peru, Argentina and Bolivia: {sa} sites, {ha} ha, {ca} checked. The map and the charts below show Chile only." });
+Object.assign(window.I18N.de, { tot_title: "Gesamtergebnis bisher, inklusive erstem Test in den Anden", tot_sites: "bestätigte Haldenstandorte", tot_ha: "Hektar Haldenstandorte umrissen", tot_checked: "von einem Menschen geprüfte Standorte",
+  tot_note: "Chile: {sc} Standorte, {hc} ha, {cc} geprüft. Erster Test in Teilen von Peru, Argentinien und Bolivien: {sa} Standorte, {ha} ha, {ca} geprüft. Karte und Diagramme darunter zeigen nur Chile." });
+Object.assign(window.I18N.es, { tot_title: "Resultado total hasta ahora, incluida la primera prueba en los Andes", tot_sites: "sitios con vertedero confirmados", tot_ha: "hectáreas de sitios con vertedero delimitadas", tot_checked: "sitios revisados por una persona",
+  tot_note: "Chile: {sc} sitios, {hc} ha, {cc} revisados. Primera prueba en partes de Perú, Argentina y Bolivia: {sa} sitios, {ha} ha, {ca} revisados. El mapa y los gráficos de abajo muestran solo Chile." });

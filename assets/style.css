@@ -205,3 +205,6 @@ a{color:var(--amber)}
 /* map box keeps its own height; it follows the page while the long side column scrolls */
 .mapgrid{align-items:start}.mapbox{position:sticky;top:76px}
 @media (max-width:980px){.mapbox{position:relative;top:auto}}
+
+.tot-h{font-size:18px;margin:0 0 12px}.totals{margin-bottom:8px}#totalsNote{margin:0 0 28px}
+@media (max-width:700px){.totals{grid-template-columns:1fr}.totals div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}}

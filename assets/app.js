@@ -79,6 +79,11 @@
     const s = DATA.stats; if (!s) return;
     const c = counts();
     $$("[data-count]").forEach((el) => { const v = s[el.dataset.count]; el.dataset.target = v == null ? "" : v; el.textContent = v == null ? "–" : nf(Math.round(v)); });
+    const T = s.total; if (T && $("#totals")) {
+      $("#totals").innerHTML = [["tot_sites", T.sites], ["tot_ha", Math.round(T.ha)], ["tot_checked", T.checked]]
+        .map(([k, v]) => `<div><dd>${nf(v)}</dd><dt>${t(k)}</dt></div>`).join("");
+      $("#totalsNote").textContent = t("tot_note", { sc: nf(T.sites_chile), sa: nf(T.sites_andes), hc: nf(Math.round(T.ha_chile)), ha: nf(Math.round(T.ha_andes)), cc: nf(T.checked_chile), ca: nf(T.checked_andes) });
+    }
     $("#areaFull").textContent = t("area_full", { n: nf(Math.round(s.found_full_ha)), c: nf(Math.round(s.found_ha_chile || 0)), a: nf(Math.round(s.found_ha_andes || 0)) });
     $("#scanTiles").textContent = s.scan_tiles ? "(" + t("scan_tiles", { n: nf(s.scan_tiles) }) + ")" : "";
     $$("[data-n]").forEach((el) => (el.textContent = nf(c[el.dataset.n] ?? 0)));
