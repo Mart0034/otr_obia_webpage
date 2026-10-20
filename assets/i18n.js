@@ -1,0 +1,461 @@
+/* Texts in English, German and Spanish. {n}-style placeholders are filled by t(). */
+window.I18N = {
+  en: {
+    view_start: "At the start",
+    view_found: "+ Found with the system",
+    view_all: "+ Open candidates",
+    layer_known: "Known at the start (hand-marked by our partner)",
+    layer_found: "Found with the system (person confirmed)",
+    layer_cand: "Open candidates, not yet checked",
+    layer_mines: "Mine outlines (zoom in)",
+    found_split: "{ai} places: the AI agreed and a person confirmed. {human} places: a person confirmed, the AI was unsure or not yet available.",
+    pop_found_n: "{n} new dump place(s)",
+    pop_zoom: "Click to zoom in",
+    growth_title: "Known dump places, round by round",
+    growth_text: "From {a} places at the start to {b} today, one review round at a time. And {open} candidates are still waiting.",
+    growth_note: "A place is one dump or a group of finds less than 200 m apart. Round 1 to 9 are the review rounds so far.",
+    gain_title: "Look at 3% of the list, find 6 in 10 dumps",
+    gain_text: "If a person only reviews the {x}% of sites the AI rates at 70% or more, they find {y}% of all confirmed dumps. Going through the list in random order, they would have to look at {y}% of all sites for the same result. Looking at {x2}% of the list finds {y2}%.",
+    gain_x: "share of sites looked at",
+    gain_y: "share of dumps found",
+    gain_ai: "AI order",
+    gain_rand: "random order",
+    aiq_title: "The AI check got much better after round 5",
+    aiq_note: "Share of sites the AI rated 70% or more that were real dumps, per review round. Small numbers per round. Round 8 was new terrain.",
+    rounds_details: "Details: every review round",
+    region_north: "North (Arica - Tarapacá)", region_atacama: "Atacama (Antofagasta)", region_south: "South (Atacama - Coquimbo)",
+    nav_how: "How it works", nav_map: "Map", nav_results: "Results", nav_why: "Use cases", nav_contact: "Contact",
+    hero_kicker: "Proof of concept",
+    hero_title: "Finding abandoned mining-tire dumps from space",
+    hero_sub: "Giant tires from open-pit mines pile up in the desert. OTR-finder reads free satellite data, lets a model and an AI shortlist the suspicious spots, and a person confirms them.",
+    cta_map: "Explore the map", cta_how: "How it works",
+    stat_known: "dump places we started with (hand-marked by our partner)", stat_reviewed: "candidate sites checked by a person",
+    stat_found: "new dump places found with the system", stat_cand: "open candidates to check",
+    how_title: "From satellite pixels to a confirmed dump",
+    how_lead: "A real example from northern Chile. Step through what the system does with one satellite scene.",
+    step1_t: "Satellite image", step1_d: "Free Sentinel-2 images (10 m per pixel) plus radar and elevation data. A dump of giant tires shows up as a dark, rough patch on bare ground.",
+    step2_t: "Cut into segments", step2_d: "The image is divided into thousands of small, uniform patches (about 12 pixels each). Each patch is described by colour, texture, shape, radar, terrain and change over the years.",
+    step3_t: "The model scores every patch", step3_d: "A random forest trained on dumps we already know gives each patch a score. Darker red means more dump-like. Neighbouring high scores become one candidate site.",
+    step4_t: "AI check, then a person", step4_d: "A vision AI looks at the candidate in its surroundings and gives a probability and a reason. A person makes the final call. The green outline is the confirmed dump.",
+    step_of: "Step {i} of 4", chip_note: "Real Sentinel-2 scene, about 1 km wide. Location not shown.",
+    map_title: "What we knew, and what the system found",
+    map_lead: "Everything except the blue squares was found by the system or with its help.",
+    layer_ai: "Found with the system: AI agreed, person confirmed",
+    layer_human: "Found with the system: person confirmed (AI unsure or not yet available)", 
+    base_sat: "Satellite", base_map: "Map",
+    privacy: "Locations are rounded to ~1 km cells. Exact coordinates are not published.",
+    regions_title: "Regions", reg_show: "Show on map", reg_known: "known at the start", reg_found: "new dump places found",
+    reg_cand: "open candidates", reg_reviewed: "sites checked",
+    pop_known: "{n} dump place(s) in this cell, hand-marked at the start", pop_found: "{n} new dump place(s) in this cell",
+    pop_cand: "{n} candidate(s) in this cell", pop_score: "Model score about {s}%", pop_size: "Size: {s}",
+    pop_how_ai: "AI agreed (50% or more) and a person confirmed",
+    pop_how_human: "A person confirmed it (AI unsure or not yet available)",
+    pop_kind_dump: "Full dump", pop_kind_partial: "Dump inside a larger outline",
+    pop_cand_note: "Suggested by the model. Not confirmed.",
+    size_s: "small", size_m: "medium", size_l: "large",
+    res_title: "How well does it work?", res_lead: "Honest numbers from every list a person has reviewed so far.",
+    chart_title: "Confirmed dumps per review round", chart_note: "Only sites a person actually looked at are counted. Sites the AI discarded on its own are shown separately (+ AI). Each round used the labels of the earlier ones.", round_n: "Round {i}", tag_mines: "138 mines", tag_quarries: "quarries", tag_atacama: "Atacama", tag_chile: "new Chile", tag_mixed: "Atacama + Chile", tag_chile_all: "all of Chile", chart_auto: "{a} further sites were discarded by the AI on its own", chart_open: "{n} open",
+    ai_title: "The AI check separates well",
+    ai_text: "Among candidates the AI rated 70% or more, {hi}% were confirmed (latest rounds: {hir}%). Among those under 30%, only {lo}% were.",
+    safe_title: "Automatic discards hold up under checks",
+    safe_text: "The AI wanted to discard {auto} sites on its own. A person re-checked a random {spot} of them. Real dumps found among them: {miss}.",
+    honest_title: "What this is, and what it is not",
+    honest_text: "About {rate}% of the sites a person looked at turned out to be real dumps. The tool shortlists; a person still decides. Numbers come from one region of Chile and will change as more data is labelled.",
+    n_of: "{c} of {n}",
+    why_title: "Who is it for?", why1_t: "Tire recyclers", why1_d: "Find where large volumes of used OTR tires lie, and plan collection.",
+    why2_t: "Mining companies", why2_d: "Get an overview of what is lying around on and near your sites.",
+    why3_t: "Authorities and researchers", why3_d: "Monitor and document tire stockpiles over time, without field surveys.",
+    contact_title: "Get in touch", contact_lead: "Interested in this for your region? This form is a demo and sends nothing.",
+    f_name: "Name", f_email: "Email", f_msg: "Message", f_send: "Send", f_demo: "Demo only: nothing is sent.",
+    f_thanks: "Thank you. (Demo: your message was not sent.)", f_bad: "Please fill in all fields with a valid email.",
+    foot_text: "OTR-finder is a proof of concept. Candidates are model suggestions, not confirmed dumps.",
+    foot_data: "Data: Sentinel-1/2 (Copernicus), Copernicus DEM, OpenStreetMap, mining polygons by Tang and Werner (2023). Satellite basemap: Sentinel-2 cloudless by EOX.",
+    skip: "Skip to content", lang_label: "Language"
+    ,places_note: "A \"place\" is one dump, or a group of finds less than 200 m apart. The 205 hand-drawn outlines we started with are small pieces that make up {k} places. Each marker is a ~1 km cell: locations are deliberately generalised on this public page."
+    ,hero_gain: "That is {x} as many dump places as we started with, after checking {n} sites. {open} more candidates are waiting."
+  },
+  de: {
+    view_start: "Am Anfang",
+    view_found: "+ Mit dem System gefunden",
+    view_all: "+ Offene Kandidaten",
+    layer_known: "Zu Beginn bekannt (von Hand markiert, von unserem Partner)",
+    layer_found: "Mit dem System gefunden (Mensch bestätigt)",
+    layer_cand: "Offene Kandidaten, noch nicht geprüft",
+    layer_mines: "Minen-Umrisse (hineinzoomen)",
+    found_split: "{ai} Orte: die KI stimmte zu und ein Mensch bestätigte. {human} Orte: ein Mensch bestätigte, die KI war unsicher oder noch nicht verfügbar.",
+    pop_found_n: "{n} neue(r) Haldenort(e)",
+    pop_zoom: "Klicken zum Hineinzoomen",
+    growth_title: "Bekannte Haldenorte, Runde für Runde",
+    growth_text: "Von {a} Orten am Anfang auf {b} heute, eine Prüfrunde nach der anderen. Und {open} Kandidaten warten noch.",
+    growth_note: "Ein Ort ist eine Halde oder eine Gruppe von Funden mit weniger als 200 m Abstand. Runde 1 bis 9 sind die bisherigen Prüfrunden.",
+    gain_title: "3 % der Liste ansehen, 6 von 10 Halden finden",
+    gain_text: "Wenn ein Mensch nur die {x} % der Standorte prüft, die die KI mit 70 % oder mehr bewertet, findet er {y} % aller bestätigten Halden. In zufälliger Reihenfolge müsste er dafür {y} % aller Standorte ansehen. Bei {x2} % der Liste sind es {y2} %.",
+    gain_x: "Anteil der angesehenen Standorte",
+    gain_y: "Anteil der gefundenen Halden",
+    gain_ai: "KI-Reihenfolge",
+    gain_rand: "zufällige Reihenfolge",
+    aiq_title: "Die KI-Prüfung wurde nach Runde 5 deutlich besser",
+    aiq_note: "Anteil der Standorte mit KI-Wert 70 % oder mehr, die echte Halden waren, je Prüfrunde. Kleine Zahlen pro Runde. Runde 8 war neues Gelände.",
+    rounds_details: "Details: jede Prüfrunde",
+    region_north: "Norden (Arica - Tarapacá)", region_atacama: "Atacama (Antofagasta)", region_south: "Süden (Atacama - Coquimbo)",
+    nav_how: "So funktioniert's", nav_map: "Karte", nav_results: "Ergebnisse", nav_why: "Nutzen", nav_contact: "Kontakt",
+    hero_kicker: "Machbarkeitsstudie",
+    hero_title: "Verlassene Bergbau-Reifenhalden aus dem All finden",
+    hero_sub: "Riesige Reifen aus Tagebauen türmen sich in der Wüste. OTR-finder liest freie Satellitendaten, ein Modell und eine KI wählen die verdächtigen Stellen aus, und ein Mensch bestätigt sie.",
+    cta_map: "Karte erkunden", cta_how: "So funktioniert's",
+    stat_known: "Haldenorte zu Beginn (von Hand markiert, von unserem Partner)", stat_reviewed: "von Menschen geprüfte Kandidaten",
+    stat_found: "neue Haldenorte mit dem System gefunden", stat_cand: "offene Kandidaten zum Prüfen",
+    how_title: "Vom Satellitenpixel zur bestätigten Halde",
+    how_lead: "Ein echtes Beispiel aus Nordchile. Schritt für Schritt, was das System mit einer Satellitenszene macht.",
+    step1_t: "Satellitenbild", step1_d: "Freie Sentinel-2-Bilder (10 m pro Pixel) plus Radar- und Höhendaten. Eine Halde aus Riesenreifen erscheint als dunkle, raue Fläche auf nacktem Boden.",
+    step2_t: "In Segmente zerlegt", step2_d: "Das Bild wird in tausende kleine, einheitliche Flecken geteilt (je etwa 12 Pixel). Jeder Fleck wird durch Farbe, Textur, Form, Radar, Gelände und Veränderung über die Jahre beschrieben.",
+    step3_t: "Das Modell bewertet jeden Fleck", step3_d: "Ein Random Forest, trainiert auf bereits bekannten Halden, gibt jedem Fleck einen Wert. Dunkleres Rot heißt haldenähnlicher. Benachbarte hohe Werte werden zu einem Kandidaten.",
+    step4_t: "KI-Prüfung, dann ein Mensch", step4_d: "Eine Bild-KI betrachtet den Kandidaten samt Umgebung und nennt eine Wahrscheinlichkeit und einen Grund. Ein Mensch entscheidet. Der grüne Umriss ist die bestätigte Halde.",
+    step_of: "Schritt {i} von 4", chip_note: "Echte Sentinel-2-Szene, etwa 1 km breit. Ort nicht angegeben.",
+    map_title: "Was wir kannten und was das System fand",
+    map_lead: "Alles außer den blauen Quadraten wurde vom System oder mit seiner Hilfe gefunden.",
+    layer_ai: "Mit dem System gefunden: KI stimmte zu, Mensch bestätigt",
+    layer_human: "Mit dem System gefunden: Mensch bestätigt (KI unsicher oder noch nicht verfügbar)", 
+    base_sat: "Satellit", base_map: "Karte",
+    privacy: "Orte sind auf Zellen von ca. 1 km gerundet. Genaue Koordinaten werden nicht veröffentlicht.",
+    regions_title: "Regionen", reg_show: "Auf Karte zeigen", reg_known: "zu Beginn bekannt", reg_found: "neue Haldenorte gefunden",
+    reg_cand: "offene Kandidaten", reg_reviewed: "Standorte geprüft",
+    pop_known: "{n} Haldenort(e) in dieser Zelle, zu Beginn von Hand markiert", pop_found: "{n} neue(r) Haldenort(e) in dieser Zelle",
+    pop_cand: "{n} Kandidat(en) in dieser Zelle", pop_score: "Modellwert etwa {s} %", pop_size: "Größe: {s}",
+    pop_how_ai: "KI stimmte zu (50 % oder mehr) und ein Mensch hat bestätigt",
+    pop_how_human: "Ein Mensch hat es bestätigt (KI unsicher oder noch nicht verfügbar)",
+    pop_kind_dump: "Ganze Halde", pop_kind_partial: "Halde innerhalb eines größeren Umrisses",
+    pop_cand_note: "Vom Modell vorgeschlagen. Nicht bestätigt.",
+    size_s: "klein", size_m: "mittel", size_l: "groß",
+    res_title: "Wie gut funktioniert es?", res_lead: "Ehrliche Zahlen aus allen bisher von Menschen geprüften Listen.",
+    chart_title: "Bestätigte Halden pro Prüfrunde", chart_note: "Gezählt werden nur Standorte, die ein Mensch wirklich angesehen hat. Was die KI von allein verworfen hat, steht getrennt (+ KI). Jede Runde nutzte die Labels der früheren.", round_n: "Runde {i}", tag_mines: "138 Minen", tag_quarries: "Steinbrüche", tag_atacama: "Atacama", tag_chile: "Neues Chile", tag_mixed: "Atacama + Chile", tag_chile_all: "ganz Chile", chart_auto: "{a} weitere Standorte hat die KI von allein verworfen", chart_open: "{n} offen",
+    ai_title: "Die KI-Prüfung trennt gut",
+    ai_text: "Von den Kandidaten, die die KI mit 70 % oder mehr bewertete, wurden {hi} % bestätigt (letzte Runden: {hir} %). Bei unter 30 % waren es nur {lo} %.",
+    safe_title: "Automatisches Aussortieren hält Stichproben stand",
+    safe_text: "Die KI wollte {auto} Standorte von allein verwerfen. Ein Mensch hat {spot} davon zufällig nachgeprüft. Echte Halden darunter: {miss}.",
+    honest_title: "Was das ist und was nicht",
+    honest_text: "Etwa {rate} % der Standorte, die ein Mensch angesehen hat, waren echte Halden. Das Werkzeug wählt vor; ein Mensch entscheidet weiter. Die Zahlen stammen aus einer Region Chiles und ändern sich, wenn mehr Daten geprüft werden.",
+    n_of: "{c} von {n}",
+    why_title: "Für wen ist es?", why1_t: "Reifenrecycler", why1_d: "Finden, wo große Mengen gebrauchter OTR-Reifen liegen, und die Abholung planen.",
+    why2_t: "Bergbauunternehmen", why2_d: "Einen Überblick bekommen, was auf und neben den eigenen Flächen liegt.",
+    why3_t: "Behörden und Forschung", why3_d: "Reifenlager über die Zeit beobachten und dokumentieren, ohne Geländebegehung.",
+    contact_title: "Kontakt aufnehmen", contact_lead: "Interesse für Ihre Region? Dieses Formular ist eine Demo und sendet nichts.",
+    f_name: "Name", f_email: "E-Mail", f_msg: "Nachricht", f_send: "Senden", f_demo: "Nur Demo: es wird nichts gesendet.",
+    f_thanks: "Danke. (Demo: Ihre Nachricht wurde nicht gesendet.)", f_bad: "Bitte alle Felder ausfüllen, mit gültiger E-Mail.",
+    foot_text: "OTR-finder ist eine Machbarkeitsstudie. Kandidaten sind Modellvorschläge, keine bestätigten Halden.",
+    foot_data: "Daten: Sentinel-1/2 (Copernicus), Copernicus DEM, OpenStreetMap, Bergbau-Polygone von Tang und Werner (2023). Satelliten-Hintergrund: Sentinel-2 cloudless von EOX.",
+    skip: "Zum Inhalt springen", lang_label: "Sprache"
+    ,places_note: "Ein „Ort“ ist eine Halde oder eine Gruppe von Funden mit weniger als 200 m Abstand. Die 205 von Hand gezeichneten Umrisse vom Anfang sind kleine Stücke, die zusammen {k} Orte ergeben. Jede Markierung ist eine Zelle von etwa 1 km: Orte sind auf dieser öffentlichen Seite bewusst verallgemeinert."
+    ,hero_gain: "Das sind {x} so viele Haldenorte wie am Anfang, nach Prüfung von {n} Standorten. {open} weitere Kandidaten warten."
+  },
+  es: {
+    view_start: "Al inicio",
+    view_found: "+ Hallado con el sistema",
+    view_all: "+ Candidatos abiertos",
+    layer_known: "Conocidos al inicio (marcados a mano por nuestro socio)",
+    layer_found: "Hallados con el sistema (persona confirmó)",
+    layer_cand: "Candidatos abiertos, aún sin revisar",
+    layer_mines: "Contornos de minas (acercar)",
+    found_split: "{ai} lugares: la IA coincidió y una persona confirmó. {human} lugares: una persona confirmó, la IA estaba insegura o aún no disponible.",
+    pop_found_n: "{n} nuevo(s) lugar(es) de vertedero",
+    pop_zoom: "Clic para acercar",
+    growth_title: "Lugares de vertedero conocidos, ronda a ronda",
+    growth_text: "De {a} lugares al inicio a {b} hoy, una ronda de revisión tras otra. Y aún esperan {open} candidatos.",
+    growth_note: "Un lugar es un vertedero o un grupo de hallazgos a menos de 200 m. Las rondas 1 a 9 son las rondas de revisión hasta ahora.",
+    gain_title: "Mirar el 3 % de la lista, hallar 6 de cada 10 vertederos",
+    gain_text: "Si una persona solo revisa el {x} % de los sitios que la IA valora con 70 % o más, halla el {y} % de todos los vertederos confirmados. Con la lista en orden aleatorio tendría que mirar el {y} % de los sitios para lo mismo. Mirando el {x2} % de la lista halla el {y2} %.",
+    gain_x: "proporción de sitios mirados",
+    gain_y: "proporción de vertederos hallados",
+    gain_ai: "orden de la IA",
+    gain_rand: "orden aleatorio",
+    aiq_title: "La revisión por IA mejoró mucho tras la ronda 5",
+    aiq_note: "Proporción de sitios con IA de 70 % o más que eran vertederos reales, por ronda. Pocas cifras por ronda. La ronda 8 fue terreno nuevo.",
+    rounds_details: "Detalle: cada ronda de revisión",
+    region_north: "Norte (Arica - Tarapacá)", region_atacama: "Atacama (Antofagasta)", region_south: "Sur (Atacama - Coquimbo)",
+    nav_how: "Cómo funciona", nav_map: "Mapa", nav_results: "Resultados", nav_why: "Usos", nav_contact: "Contacto",
+    hero_kicker: "Prueba de concepto",
+    hero_title: "Encontrar desde el espacio vertederos abandonados de neumáticos mineros",
+    hero_sub: "Los neumáticos gigantes de las minas a cielo abierto se acumulan en el desierto. OTR-finder lee datos satelitales gratuitos, un modelo y una IA preseleccionan los lugares sospechosos y una persona los confirma.",
+    cta_map: "Explorar el mapa", cta_how: "Cómo funciona",
+    stat_known: "lugares de vertedero de partida (marcados a mano por nuestro socio)", stat_reviewed: "candidatos revisados por una persona",
+    stat_found: "nuevos lugares de vertedero hallados con el sistema", stat_cand: "candidatos abiertos por revisar",
+    how_title: "De píxeles satelitales a un vertedero confirmado",
+    how_lead: "Un ejemplo real del norte de Chile. Paso a paso, lo que hace el sistema con una escena satelital.",
+    step1_t: "Imagen satelital", step1_d: "Imágenes gratuitas de Sentinel-2 (10 m por píxel) más radar y datos de elevación. Un vertedero de neumáticos gigantes aparece como una mancha oscura y rugosa sobre suelo desnudo.",
+    step2_t: "Dividida en segmentos", step2_d: "La imagen se divide en miles de pequeñas zonas uniformes (unos 12 píxeles cada una). Cada zona se describe por color, textura, forma, radar, relieve y cambio a lo largo de los años.",
+    step3_t: "El modelo puntúa cada zona", step3_d: "Un random forest entrenado con vertederos ya conocidos da a cada zona una puntuación. Más rojo oscuro significa más parecido a un vertedero. Las puntuaciones altas vecinas forman un candidato.",
+    step4_t: "Revisión por IA y luego por una persona", step4_d: "Una IA de visión mira el candidato con su entorno y da una probabilidad y una razón. Una persona decide. El contorno verde es el vertedero confirmado.",
+    step_of: "Paso {i} de 4", chip_note: "Escena real de Sentinel-2, de aproximadamente 1 km de ancho. Ubicación no indicada.",
+    map_title: "Lo que conocíamos y lo que encontró el sistema",
+    map_lead: "Todo lo que no son cuadrados azules fue hallado por el sistema o con su ayuda.",
+    layer_ai: "Hallado con el sistema: la IA coincidió, persona confirmó",
+    layer_human: "Hallado con el sistema: persona confirmó (IA insegura o aún no disponible)", 
+    base_sat: "Satélite", base_map: "Mapa",
+    privacy: "Las ubicaciones se redondean a celdas de ~1 km. No se publican coordenadas exactas.",
+    regions_title: "Regiones", reg_show: "Mostrar en el mapa", reg_known: "conocidos al inicio", reg_found: "nuevos lugares hallados",
+    reg_cand: "candidatos abiertos", reg_reviewed: "sitios revisados",
+    pop_known: "{n} lugar(es) de vertedero en esta celda, marcados a mano al inicio", pop_found: "{n} nuevo(s) lugar(es) de vertedero en esta celda",
+    pop_cand: "{n} candidato(s) en esta celda", pop_score: "Puntuación del modelo: aprox. {s} %", pop_size: "Tamaño: {s}",
+    pop_how_ai: "La IA coincidió (50 % o más) y una persona confirmó",
+    pop_how_human: "Una persona lo confirmó (IA insegura o aún no disponible)",
+    pop_kind_dump: "Vertedero completo", pop_kind_partial: "Vertedero dentro de un contorno mayor",
+    pop_cand_note: "Sugerido por el modelo. No confirmado.",
+    size_s: "pequeño", size_m: "mediano", size_l: "grande",
+    res_title: "¿Qué tan bien funciona?", res_lead: "Cifras honestas de todas las listas que una persona ha revisado hasta ahora.",
+    chart_title: "Vertederos confirmados por ronda de revisión", chart_note: "Solo se cuentan los sitios que una persona realmente miró. Lo que la IA descartó por sí sola se muestra aparte (+ IA). Cada ronda usó las etiquetas de las anteriores.", round_n: "Ronda {i}", tag_mines: "138 minas", tag_quarries: "canteras", tag_atacama: "Atacama", tag_chile: "Chile nuevo", tag_mixed: "Atacama + Chile", tag_chile_all: "todo Chile", chart_auto: "La IA descartó por sí sola {a} sitios más", chart_open: "{n} abiertos",
+    ai_title: "La revisión por IA separa bien",
+    ai_text: "De los candidatos que la IA valoró con 70 % o más, se confirmó el {hi} % (últimas rondas: {hir} %). De los que tenían menos de 30 %, solo el {lo} %.",
+    safe_title: "Los descartes automáticos resisten las comprobaciones",
+    safe_text: "La IA quiso descartar {auto} sitios por sí sola. Una persona volvió a revisar {spot} al azar. Vertederos reales entre ellos: {miss}.",
+    honest_title: "Qué es y qué no es",
+    honest_text: "Alrededor del {rate} % de los sitios que una persona miró resultaron ser vertederos reales. La herramienta preselecciona; una persona sigue decidiendo. Las cifras vienen de una región de Chile y cambiarán al etiquetar más datos.",
+    n_of: "{c} de {n}",
+    why_title: "¿Para quién es?", why1_t: "Recicladores de neumáticos", why1_d: "Encontrar dónde hay grandes volúmenes de neumáticos OTR usados y planificar la recogida.",
+    why2_t: "Empresas mineras", why2_d: "Tener una visión general de lo que hay en y junto a sus instalaciones.",
+    why3_t: "Autoridades e investigación", why3_d: "Vigilar y documentar acopios de neumáticos a lo largo del tiempo, sin visitas de campo.",
+    contact_title: "Ponerse en contacto", contact_lead: "¿Le interesa para su región? Este formulario es una demostración y no envía nada.",
+    f_name: "Nombre", f_email: "Correo", f_msg: "Mensaje", f_send: "Enviar", f_demo: "Solo demostración: no se envía nada.",
+    f_thanks: "Gracias. (Demostración: su mensaje no se envió.)", f_bad: "Complete todos los campos con un correo válido.",
+    foot_text: "OTR-finder es una prueba de concepto. Los candidatos son sugerencias del modelo, no vertederos confirmados.",
+    foot_data: "Datos: Sentinel-1/2 (Copernicus), Copernicus DEM, OpenStreetMap, polígonos mineros de Tang y Werner (2023). Fondo satelital: Sentinel-2 cloudless de EOX.",
+    skip: "Saltar al contenido", lang_label: "Idioma"
+    ,places_note: "Un «lugar» es un vertedero o un grupo de hallazgos a menos de 200 m. Los 205 contornos dibujados a mano al inicio son piezas pequeñas que forman {k} lugares. Cada marca es una celda de aproximadamente 1 km: en esta página pública las ubicaciones están generalizadas a propósito."
+    ,hero_gain: "Son {x} más lugares de vertedero que al inicio, tras revisar {n} sitios. Esperan {open} candidatos más."
+  }
+};
+
+/* Wording of the light redesign: overrides earlier keys */
+Object.assign(window.I18N.en, {
+  hero_title: "Finding mining tire dumps from satellite images",
+  hero_sub: "Used giant tires from open-pit mines pile up in dumps of every size, abandoned or still in use. OTR-finder reads free satellite data. A model and an AI shortlist the suspicious spots, and a person confirms them.",
+  stat_scan: "of satellite imagery analysed", scan_tiles: "{n} tiles",
+  stat_known: "dump places known at the start, marked by hand by our partner",
+  stat_found: "new dump places found with the system",
+  hero_gain: "That is {x} as many dump places as we started with.",
+  growth_text: "From {a} places at the start to {b} today, one review round at a time.",
+  how_lead: "Three real finds from northern Chile. Pick one and follow what the system does with its satellite scene.",
+  ex_tab: "Example {i} · {a} m²",
+  step1_d: "Free Sentinel-2 images (10 m per pixel) plus radar and elevation data. A tire dump shows up as a dark, rough patch on bare ground.",
+  step2_d: "The image is divided into thousands of small, uniform patches. Each patch is described by colour, texture, shape, radar, terrain and change over the years.",
+  step3_d: "A model trained on dumps we already know scores every patch. Neighbouring high scores merge into one candidate site, outlined in red.",
+  step4_d: "A vision AI checks the candidate in its surroundings and gives a probability and a reason. A person makes the final call. The green outline is the confirmed dump.",
+  chip_note: "Sentinel-2 scene, about 1 km wide. Dump area {a} m², AI estimate {ai}%. Position {lat}, {lon}.",
+  map_lead: "The blue markers were known at the start. Everything else was found by the system or with its help.",
+  foot_text: "OTR-finder is a proof of concept.",
+});
+Object.assign(window.I18N.de, {
+  hero_title: "Reifenhalden des Bergbaus auf Satellitenbildern finden",
+  hero_sub: "Gebrauchte Riesenreifen aus Tagebauen liegen in Halden jeder Größe, verlassen oder noch in Benutzung. OTR-finder liest freie Satellitendaten. Ein Modell und eine KI wählen die verdächtigen Stellen aus, und ein Mensch bestätigt sie.",
+  stat_scan: "Satellitenbilder analysiert", scan_tiles: "{n} Kacheln",
+  stat_known: "Haldenorte zu Beginn bekannt, von unserem Partner von Hand markiert",
+  stat_found: "neue Haldenorte mit dem System gefunden",
+  hero_gain: "Das sind {x} so viele Haldenorte wie am Anfang.",
+  growth_text: "Von {a} Orten am Anfang auf {b} heute, Prüfrunde für Prüfrunde.",
+  how_lead: "Drei echte Funde aus Nordchile. Wähle einen und folge dem, was das System mit seiner Satellitenszene macht.",
+  ex_tab: "Beispiel {i} · {a} m²",
+  step1_d: "Freie Sentinel-2-Bilder (10 m pro Pixel) plus Radar- und Höhendaten. Eine Reifenhalde erscheint als dunkle, raue Fläche auf nacktem Boden.",
+  step2_d: "Das Bild wird in tausende kleine, einheitliche Flecken geteilt. Jeder Fleck wird durch Farbe, Textur, Form, Radar, Gelände und Veränderung über die Jahre beschrieben.",
+  step3_d: "Ein Modell, trainiert auf bereits bekannten Halden, bewertet jeden Fleck. Benachbarte hohe Werte werden zu einem Kandidaten zusammengefasst, rot umrandet.",
+  step4_d: "Eine Bild-KI prüft den Kandidaten samt Umgebung und nennt eine Wahrscheinlichkeit und einen Grund. Ein Mensch entscheidet. Der grüne Umriss ist die bestätigte Halde.",
+  chip_note: "Sentinel-2-Szene, etwa 1 km breit. Haldenfläche {a} m², KI-Schätzung {ai} %. Position {lat}, {lon}.",
+  map_lead: "Die blauen Markierungen waren am Anfang bekannt. Alles andere hat das System gefunden oder dabei geholfen.",
+  foot_text: "OTR-finder ist eine Machbarkeitsstudie.",
+});
+Object.assign(window.I18N.es, {
+  hero_title: "Encontrar vertederos de neumáticos mineros en imágenes satelitales",
+  hero_sub: "Los neumáticos gigantes usados de las minas a cielo abierto se acumulan en vertederos de todos los tamaños, abandonados o aún en uso. OTR-finder lee datos satelitales gratuitos. Un modelo y una IA preseleccionan los puntos sospechosos y una persona los confirma.",
+  stat_scan: "de imágenes satelitales analizadas", scan_tiles: "{n} teselas",
+  stat_known: "lugares con vertedero conocidos al inicio, marcados a mano por nuestro socio",
+  stat_found: "lugares nuevos encontrados con el sistema",
+  hero_gain: "Es {x} la cantidad de lugares con la que empezamos.",
+  growth_text: "De {a} lugares al inicio a {b} hoy, ronda de revisión tras ronda.",
+  how_lead: "Tres hallazgos reales del norte de Chile. Elige uno y sigue lo que hace el sistema con su escena satelital.",
+  ex_tab: "Ejemplo {i} · {a} m²",
+  step1_d: "Imágenes gratuitas de Sentinel-2 (10 m por píxel) más radar y datos de elevación. Un vertedero de neumáticos aparece como una mancha oscura y rugosa sobre suelo desnudo.",
+  step2_d: "La imagen se divide en miles de pequeñas zonas uniformes. Cada zona se describe por color, textura, forma, radar, relieve y cambio a lo largo de los años.",
+  step3_d: "Un modelo entrenado con vertederos ya conocidos puntúa cada zona. Las puntuaciones altas vecinas se unen en un candidato, con contorno rojo.",
+  step4_d: "Una IA de visión revisa el candidato con su entorno y da una probabilidad y una razón. Una persona decide. El contorno verde es el vertedero confirmado.",
+  chip_note: "Escena de Sentinel-2, de aproximadamente 1 km de ancho. Superficie del vertedero {a} m², estimación de la IA {ai} %. Posición {lat}, {lon}.",
+  map_lead: "Los marcadores azules se conocían al inicio. Todo lo demás lo encontró el sistema o se encontró con su ayuda.",
+  foot_text: "OTR-finder es una prueba de concepto.",
+});
+
+Object.assign(window.I18N.en, { ex_s2: "Sentinel-2 (what the system sees)", ex_hi: "High-resolution view" });
+Object.assign(window.I18N.de, { ex_s2: "Sentinel-2 (was das System sieht)", ex_hi: "Hochauflösende Ansicht" });
+Object.assign(window.I18N.es, { ex_s2: "Sentinel-2 (lo que ve el sistema)", ex_hi: "Vista de alta resolución" });
+
+Object.assign(window.I18N.en, { privacy: "Locations on the map are rounded to ~1 km cells. The three examples above show their real position." });
+Object.assign(window.I18N.de, { privacy: "Orte auf der Karte sind auf ~1-km-Zellen gerundet. Die drei Beispiele oben zeigen ihre echte Position." });
+Object.assign(window.I18N.es, { privacy: "Las ubicaciones del mapa están redondeadas a celdas de ~1 km. Los tres ejemplos de arriba muestran su posición real." });
+
+Object.assign(window.I18N.en, { stat_scan: "hectares of satellite imagery analysed" });
+Object.assign(window.I18N.de, { stat_scan: "Hektar Satellitenbilder analysiert" });
+Object.assign(window.I18N.es, { stat_scan: "hectáreas de imágenes satelitales analizadas" });
+
+/* gallery, before/after, proof, sizes */
+Object.assign(window.I18N.en, {
+  nav_finds: "Finds",
+  finds_title: "More real finds", finds_lead: "Nine dumps found with the system, shown in high-resolution imagery with the confirmed outline in green. They differ in size and type.",
+  finds_note: "Imagery: Esri, Maxar, Earthstar Geographics. \"Dump within a larger site\" means the dump is part of a bigger outline.",
+  kind_dump: "full dump", kind_partial: "dump within a larger site", gal_ai: "AI {ai}%",
+  cmp_title: "Before and after at one site", cmp_lead: "The same area at the start and today. Blue outlines were marked by hand by our partner. Green outlines were found with the system.",
+  cmp_start: "At the start", cmp_now: "Today", cmp_known: "marked by hand at the start", cmp_found: "found with the system",
+  ai_title: "When the AI is confident, it is usually right", low_title: "When the AI is doubtful, it is rarely right", low_text: "Of {n} sites the AI rated below 30%, only {c} were real dumps.",
+  safe_title: "Automatic discards hold up under checks",
+  size_title: "All sizes, all types", size_lead: "New dump places by size. Small means under 0.8 ha, medium 0.8 to 1.6 ha, large over 1.6 ha.",
+  sz_s: "Small", sz_m: "Medium", sz_l: "Large", sz_dump: "full dump", sz_partial: "dump within a larger site",
+});
+Object.assign(window.I18N.de, {
+  nav_finds: "Funde",
+  finds_title: "Weitere echte Funde", finds_lead: "Neun mit dem System gefundene Halden in hochauflösenden Bildern, der bestätigte Umriss in Grün. Sie unterscheiden sich in Größe und Art.",
+  finds_note: "Bilder: Esri, Maxar, Earthstar Geographics. \"Halde innerhalb eines größeren Standorts\" heißt: die Halde ist Teil eines größeren Umrisses.",
+  kind_dump: "ganze Halde", kind_partial: "Halde innerhalb eines größeren Standorts", gal_ai: "KI {ai} %",
+  cmp_title: "Vorher und nachher an einem Standort", cmp_lead: "Dasselbe Gebiet am Anfang und heute. Blaue Umrisse hat unser Partner von Hand markiert. Grüne Umrisse wurden mit dem System gefunden.",
+  cmp_start: "Am Anfang", cmp_now: "Heute", cmp_known: "am Anfang von Hand markiert", cmp_found: "mit dem System gefunden",
+  ai_title: "Wenn die KI sicher ist, liegt sie meist richtig", low_title: "Wenn die KI zweifelt, liegt sie selten richtig", low_text: "Von {n} Standorten mit KI-Wert unter 30 % waren nur {c} echte Halden.",
+  safe_title: "Automatische Aussortierungen halten Prüfungen stand",
+  size_title: "Alle Größen, alle Arten", size_lead: "Neue Haldenorte nach Größe. Klein heißt unter 0,8 ha, mittel 0,8 bis 1,6 ha, groß über 1,6 ha.",
+  sz_s: "Klein", sz_m: "Mittel", sz_l: "Groß", sz_dump: "ganze Halde", sz_partial: "Halde innerhalb eines größeren Standorts",
+});
+Object.assign(window.I18N.es, {
+  nav_finds: "Hallazgos",
+  finds_title: "Más hallazgos reales", finds_lead: "Nueve vertederos encontrados con el sistema, en imágenes de alta resolución con el contorno confirmado en verde. Difieren en tamaño y tipo.",
+  finds_note: "Imágenes: Esri, Maxar, Earthstar Geographics. \"Vertedero dentro de un sitio mayor\" significa que el vertedero es parte de un contorno más grande.",
+  kind_dump: "vertedero completo", kind_partial: "vertedero dentro de un sitio mayor", gal_ai: "IA {ai} %",
+  cmp_title: "Antes y después en un sitio", cmp_lead: "La misma zona al inicio y hoy. Los contornos azules los marcó a mano nuestro socio. Los verdes se encontraron con el sistema.",
+  cmp_start: "Al inicio", cmp_now: "Hoy", cmp_known: "marcados a mano al inicio", cmp_found: "encontrados con el sistema",
+  ai_title: "Cuando la IA está segura, casi siempre acierta", low_title: "Cuando la IA duda, rara vez acierta", low_text: "De {n} sitios con valor de IA inferior a 30 %, solo {c} eran vertederos reales.",
+  safe_title: "Los descartes automáticos resisten las comprobaciones",
+  size_title: "Todos los tamaños, todos los tipos", size_lead: "Lugares nuevos por tamaño. Pequeño significa menos de 0,8 ha, mediano de 0,8 a 1,6 ha, grande más de 1,6 ha.",
+  sz_s: "Pequeño", sz_m: "Mediano", sz_l: "Grande", sz_dump: "vertedero completo", sz_partial: "vertedero dentro de un sitio mayor",
+});
+Object.assign(window.I18N.en, { ai_text: "Of the candidates the AI rated 70% or more, {hi}% were confirmed as dumps (latest rounds: {hir}%)." });
+Object.assign(window.I18N.de, { ai_text: "Von den Kandidaten mit KI-Wert 70 % oder mehr wurden {hi} % als Halden bestätigt (letzte Runden: {hir} %)." });
+Object.assign(window.I18N.es, { ai_text: "De los candidatos con valor de IA de 70 % o más, se confirmó el {hi} % como vertedero (últimas rondas: {hir} %)." });
+Object.assign(window.I18N.en, { ai_title: "When the AI is confident, more than half are real dumps", low_title: "When the AI is doubtful, almost none are" });
+Object.assign(window.I18N.de, { ai_title: "Wenn die KI sicher ist, sind mehr als die Hälfte echte Halden", low_title: "Wenn die KI zweifelt, sind es fast keine" });
+Object.assign(window.I18N.es, { ai_title: "Cuando la IA está segura, más de la mitad son vertederos reales", low_title: "Cuando la IA duda, casi ninguno lo es" });
+
+Object.assign(window.I18N.en, { cmp_close: "Zoom to one pair", cmp_all: "Show the whole area", cmp_lead: "The same area at the start and today. Blue pins mark spots our partner marked by hand. Green pins mark spots found with the system. Click a pin to zoom in." });
+Object.assign(window.I18N.de, { cmp_close: "Auf ein Paar zoomen", cmp_all: "Ganzes Gebiet zeigen", cmp_lead: "Dasselbe Gebiet am Anfang und heute. Blaue Pins markieren Stellen, die unser Partner von Hand markiert hat. Grüne Pins markieren Stellen, die mit dem System gefunden wurden. Ein Klick auf einen Pin zoomt hinein." });
+Object.assign(window.I18N.es, { cmp_close: "Acercar a un par", cmp_all: "Mostrar toda el área", cmp_lead: "La misma zona al inicio y hoy. Los pines azules marcan lugares que nuestro socio marcó a mano. Los pines verdes marcan lugares encontrados con el sistema. Haz clic en un pin para acercar." });
+
+Object.assign(window.I18N.en, {
+  cmp_title: "A place where we knew nothing", cmp_lead: "No dump was known in this area at the start. The pins show what the system found. Click a pin to zoom in.",
+  cmp_start: "At the start", cmp_now: "Today", cmp_found: "dump places found with the system", cmp_empty: "At the start: no known dump here", cmp_all: "Show the whole area",
+  fun_title: "A person checks a tiny fraction of the area", fun_lead: "From all the imagery analysed down to the confirmed dumps. Heights use a logarithmic scale, so the numbers matter more than the bar heights.",
+  fun_area: "Area analysed", fun_listed: "Sites the model shortlisted", fun_human: "Left for a person after the AI check", fun_conf: "Confirmed dumps", fun_sites: "sites", fun_tiles: "{n} tiles",
+  fun_note: "People looked at {p}% of the analysed area. The model and the AI checked the rest.",
+});
+Object.assign(window.I18N.de, {
+  cmp_title: "Ein Ort, von dem wir nichts wussten", cmp_lead: "In diesem Gebiet war am Anfang keine Halde bekannt. Die Pins zeigen, was das System gefunden hat. Ein Klick auf einen Pin zoomt hinein.",
+  cmp_start: "Am Anfang", cmp_now: "Heute", cmp_found: "mit dem System gefundene Haldenorte", cmp_empty: "Am Anfang: keine Halde bekannt", cmp_all: "Ganzes Gebiet zeigen",
+  fun_title: "Ein Mensch prüft nur einen winzigen Teil der Fläche", fun_lead: "Von allen analysierten Bildern bis zu den bestätigten Halden. Die Höhen sind logarithmisch skaliert, die Zahlen zählen mehr als die Balkenhöhen.",
+  fun_area: "Analysierte Fläche", fun_listed: "Vom Modell vorgeschlagene Standorte", fun_human: "Nach der KI-Prüfung für einen Menschen übrig", fun_conf: "Bestätigte Halden", fun_sites: "Standorte", fun_tiles: "{n} Kacheln",
+  fun_note: "Menschen haben {p} % der analysierten Fläche angesehen. Den Rest haben Modell und KI geprüft.",
+});
+Object.assign(window.I18N.es, {
+  cmp_title: "Un lugar del que no sabíamos nada", cmp_lead: "Al inicio no se conocía ningún vertedero en esta zona. Los pines muestran lo que encontró el sistema. Haz clic en un pin para acercar.",
+  cmp_start: "Al inicio", cmp_now: "Hoy", cmp_found: "lugares con vertedero encontrados con el sistema", cmp_empty: "Al inicio: ningún vertedero conocido aquí", cmp_all: "Mostrar toda el área",
+  fun_title: "Una persona revisa una fracción diminuta del área", fun_lead: "De todas las imágenes analizadas hasta los vertederos confirmados. Las alturas usan escala logarítmica, así que importan más las cifras que la altura de las barras.",
+  fun_area: "Área analizada", fun_listed: "Sitios preseleccionados por el modelo", fun_human: "Para una persona tras la revisión de la IA", fun_conf: "Vertederos confirmados", fun_sites: "sitios", fun_tiles: "{n} teselas",
+  fun_note: "Las personas revisaron el {p} % del área analizada. El resto lo revisaron el modelo y la IA.",
+});
+
+Object.assign(window.I18N.en, { fun_listed: "Shortlisted by the model", fun_human: "Left for a person after the AI check" });
+Object.assign(window.I18N.de, { fun_listed: "Vom Modell vorgeschlagen", fun_human: "Nach der KI-Prüfung für einen Menschen" });
+Object.assign(window.I18N.es, { fun_listed: "Preseleccionados por el modelo", fun_human: "Para una persona tras la IA" });
+
+Object.assign(window.I18N.en, { stat_area: "hectares of dump sites outlined by the system", area_full: "(of which {n} ha are whole dumps, the rest sit inside larger sites)" });
+Object.assign(window.I18N.de, { stat_area: "Hektar Haldenstandorte vom System umrissen", area_full: "(davon {n} ha ganze Halden, der Rest liegt innerhalb größerer Standorte)" });
+Object.assign(window.I18N.es, { stat_area: "hectáreas de sitios con vertedero delimitados por el sistema", area_full: "(de las cuales {n} ha son vertederos completos, el resto está dentro de sitios mayores)" });
+
+/* time series */
+Object.assign(window.I18N.en, {
+  tl_title: "The same place, year by year", tl_lead: "Free Sentinel-2 images make it possible to watch a place over time. The model uses this change as one of its clues.",
+  tl_tab: "Example {i} · {a} m²", tl_play: "Play", tl_pause: "Pause", tl_outline: "Show the confirmed outline",
+  tl_chart_title: "Average brightness inside the outline (lower = darker)",
+  tl_text_a: "The ground inside the outline was bright until 2019. From 2020 a dark patch appears, and it keeps getting darker and larger. This is what a growing tire dump looks like from space. Selected year: {y}.",
+  tl_text_c: "This dump is already visible in 2017 and stays almost unchanged since. Satellites can tell a long-standing stockpile from a new one. Selected year: {y}.",
+});
+Object.assign(window.I18N.de, {
+  tl_title: "Derselbe Ort, Jahr für Jahr", tl_lead: "Mit freien Sentinel-2-Bildern lässt sich ein Ort über die Zeit verfolgen. Das Modell nutzt diese Veränderung als einen seiner Hinweise.",
+  tl_tab: "Beispiel {i} · {a} m²", tl_play: "Abspielen", tl_pause: "Pause", tl_outline: "Bestätigten Umriss zeigen",
+  tl_chart_title: "Mittlere Helligkeit im Umriss (niedriger = dunkler)",
+  tl_text_a: "Der Boden im Umriss war bis 2019 hell. Ab 2020 entsteht eine dunkle Fläche, die immer dunkler und größer wird. So sieht eine wachsende Reifenhalde aus dem All aus. Gewähltes Jahr: {y}.",
+  tl_text_c: "Diese Halde ist schon 2017 sichtbar und bleibt seitdem fast unverändert. Satelliten können einen langjährigen Lagerplatz von einem neuen unterscheiden. Gewähltes Jahr: {y}.",
+});
+Object.assign(window.I18N.es, {
+  tl_title: "El mismo lugar, año tras año", tl_lead: "Las imágenes gratuitas de Sentinel-2 permiten seguir un lugar en el tiempo. El modelo usa este cambio como una de sus pistas.",
+  tl_tab: "Ejemplo {i} · {a} m²", tl_play: "Reproducir", tl_pause: "Pausa", tl_outline: "Mostrar el contorno confirmado",
+  tl_chart_title: "Brillo medio dentro del contorno (menor = más oscuro)",
+  tl_text_a: "El suelo dentro del contorno era claro hasta 2019. Desde 2020 aparece una mancha oscura que se oscurece y crece. Así se ve desde el espacio un vertedero de neumáticos en crecimiento. Año elegido: {y}.",
+  tl_text_c: "Este vertedero ya es visible en 2017 y casi no ha cambiado desde entonces. Los satélites distinguen un acopio antiguo de uno nuevo. Año elegido: {y}.",
+});
+Object.assign(window.I18N.en, { nav_finds: "Finds" });
+
+Object.assign(window.I18N.en, { nav_time: "Over time" });
+Object.assign(window.I18N.de, { nav_time: "Zeitverlauf" });
+Object.assign(window.I18N.es, { nav_time: "En el tiempo" });
+
+Object.assign(window.I18N.en, {
+  nav_layers: "What it sees", lay_title: "What the system looks at",
+  lay_lead: "A dump is more than a dark patch. For every small patch of ground the model combines 51 measurements from five kinds of data. This is the first example, shown layer by layer.",
+  lay1_t: "Colour", lay1_d: "Ten optical bands from Sentinel-2, plus indices for vegetation, water and bare soil.",
+  lay2_t: "Darkness", lay2_d: "Tire piles are darker across the infrared bands than the ground around them. Bright means dark ground here.",
+  lay3_t: "Radar", lay3_d: "Sentinel-1 radar measures surface roughness and sees through clouds.",
+  lay4_t: "Terrain", lay4_d: "Slope from the elevation model separates dumps from pit walls and shadows.",
+  lay5_t: "Change over the years", lay5_d: "Brightness in 2018 compared with 2025. The red spot got much darker.",
+  lay_note: "On top of these, the shape and texture of each patch count: buildings are rectangular, tire piles are irregular. All layers are free data.",
+});
+Object.assign(window.I18N.de, {
+  nav_layers: "Was es sieht", lay_title: "Worauf das System schaut",
+  lay_lead: "Eine Halde ist mehr als ein dunkler Fleck. Für jeden kleinen Bodenfleck kombiniert das Modell 51 Messwerte aus fünf Arten von Daten. Hier das erste Beispiel, Schicht für Schicht.",
+  lay1_t: "Farbe", lay1_d: "Zehn optische Bänder von Sentinel-2, dazu Indizes für Vegetation, Wasser und nackten Boden.",
+  lay2_t: "Dunkelheit", lay2_d: "Reifenhaufen sind in den Infrarotbändern dunkler als der Boden ringsum. Hell heißt hier dunkler Boden.",
+  lay3_t: "Radar", lay3_d: "Sentinel-1-Radar misst die Rauheit der Oberfläche und sieht durch Wolken.",
+  lay4_t: "Gelände", lay4_d: "Die Hangneigung aus dem Höhenmodell trennt Halden von Grubenwänden und Schatten.",
+  lay5_t: "Veränderung über die Jahre", lay5_d: "Helligkeit 2018 im Vergleich zu 2025. Der rote Fleck wurde deutlich dunkler.",
+  lay_note: "Dazu zählen Form und Textur jedes Flecks: Gebäude sind rechteckig, Reifenhaufen unregelmäßig. Alle Schichten sind freie Daten.",
+});
+Object.assign(window.I18N.es, {
+  nav_layers: "Qué ve", lay_title: "En qué se fija el sistema",
+  lay_lead: "Un vertedero es más que una mancha oscura. Para cada pequeña zona de terreno el modelo combina 51 mediciones de cinco tipos de datos. Aquí el primer ejemplo, capa por capa.",
+  lay1_t: "Color", lay1_d: "Diez bandas ópticas de Sentinel-2, más índices de vegetación, agua y suelo desnudo.",
+  lay2_t: "Oscuridad", lay2_d: "Las pilas de neumáticos son más oscuras en las bandas infrarrojas que el suelo alrededor. Claro significa suelo oscuro aquí.",
+  lay3_t: "Radar", lay3_d: "El radar de Sentinel-1 mide la rugosidad de la superficie y ve a través de las nubes.",
+  lay4_t: "Terreno", lay4_d: "La pendiente del modelo de elevación separa los vertederos de paredes de tajo y sombras.",
+  lay5_t: "Cambio a lo largo de los años", lay5_d: "Brillo en 2018 comparado con 2025. La mancha roja se oscureció mucho.",
+  lay_note: "Además cuentan la forma y la textura de cada zona: los edificios son rectangulares, las pilas de neumáticos irregulares. Todas las capas son datos gratuitos.",
+});
+
+Object.assign(window.I18N.en, {
+  blind_title: "Blind test: dumps the system had never seen",
+  blind_lead: "We hid {n} confirmed dump places, a quarter at a time, together with the tiles around them. The system was retrained without them and had to find them again.",
+  blind_top: "A person reviews the top {n} sites", blind_full: "The whole list (about {n} sites)", blind_random: "Picking sites at random from the same list",
+  blind_note: "Share of the hidden dump places that appear in the list. The model was trained on roughly two thirds of the labels it has today, and the lists use the model order only, without the AI check that reorders them in practice. Places inside the cut-off size or outside the preselection never reach the list, which is why even the whole list stops at 61%.",
+});
+Object.assign(window.I18N.de, {
+  blind_title: "Blindtest: Halden, die das System nie gesehen hat",
+  blind_lead: "Wir haben {n} bestätigte Haldenorte versteckt, je ein Viertel auf einmal, samt den Kacheln um sie herum. Das System wurde ohne sie neu trainiert und musste sie wiederfinden.",
+  blind_top: "Ein Mensch prüft die besten {n} Standorte", blind_full: "Die ganze Liste (etwa {n} Standorte)", blind_random: "Zufällige Auswahl aus derselben Liste",
+  blind_note: "Anteil der versteckten Haldenorte, die in der Liste vorkommen. Das Modell war mit etwa zwei Dritteln der heutigen Labels trainiert, und die Listen folgen nur der Modell-Reihenfolge, ohne die KI-Prüfung, die sie in der Praxis umsortiert. Orte unter der Mindestgröße oder außerhalb der Vorauswahl kommen nie in die Liste, deshalb endet selbst die ganze Liste bei 61 %.",
+});
+Object.assign(window.I18N.es, {
+  blind_title: "Prueba ciega: vertederos que el sistema nunca vio",
+  blind_lead: "Ocultamos {n} lugares con vertedero confirmados, un cuarto cada vez, junto con las teselas a su alrededor. El sistema se reentrenó sin ellos y tuvo que encontrarlos de nuevo.",
+  blind_top: "Una persona revisa los mejores {n} sitios", blind_full: "La lista completa (unos {n} sitios)", blind_random: "Elegir sitios al azar de la misma lista",
+  blind_note: "Porcentaje de los lugares ocultos que aparecen en la lista. El modelo se entrenó con aproximadamente dos tercios de las etiquetas actuales, y las listas siguen solo el orden del modelo, sin la revisión de la IA que las reordena en la práctica. Los lugares bajo el tamaño mínimo o fuera de la preselección nunca llegan a la lista, por eso incluso la lista completa se queda en 61 %.",
+});
+
+Object.assign(window.I18N.en, { foot_credit: "OTR-finder is a study by Martin Weiner, supported by Manfred Kunze Maschinenbau GmbH.", foot_imprint: "Imprint" });
+Object.assign(window.I18N.de, { foot_credit: "OTR-finder ist eine Studie von Martin Weiner, begleitet von der Manfred Kunze Maschinenbau GmbH.", foot_imprint: "Impressum" });
+Object.assign(window.I18N.es, { foot_credit: "OTR-finder es un estudio de Martin Weiner, con el acompañamiento de Manfred Kunze Maschinenbau GmbH.", foot_imprint: "Aviso legal" });
+
+Object.assign(window.I18N.en, { contact_lead: "Interested in this for your region, or want to talk about the study? Write to Martin Weiner." });
+Object.assign(window.I18N.de, { contact_lead: "Interesse für Ihre Region oder Fragen zur Studie? Schreiben Sie Martin Weiner." });
+Object.assign(window.I18N.es, { contact_lead: "¿Le interesa para su región o quiere hablar del estudio? Escriba a Martin Weiner." });
+
+Object.assign(window.I18N.en, { foot_credit: 'OTR-finder is a study by <a href="https://www.linkedin.com/in/martin-weiner-a4505236a/" target="_blank" rel="noopener">Martin Weiner</a>, supported by <a href="https://www.manfred-kunze-mb.de/de/" target="_blank" rel="noopener">Manfred Kunze Maschinenbau GmbH</a>.' });
+Object.assign(window.I18N.de, { foot_credit: 'OTR-finder ist eine Studie von <a href="https://www.linkedin.com/in/martin-weiner-a4505236a/" target="_blank" rel="noopener">Martin Weiner</a>, begleitet von der <a href="https://www.manfred-kunze-mb.de/de/" target="_blank" rel="noopener">Manfred Kunze Maschinenbau GmbH</a>.' });
+Object.assign(window.I18N.es, { foot_credit: 'OTR-finder es un estudio de <a href="https://www.linkedin.com/in/martin-weiner-a4505236a/" target="_blank" rel="noopener">Martin Weiner</a>, con el acompañamiento de <a href="https://www.manfred-kunze-mb.de/de/" target="_blank" rel="noopener">Manfred Kunze Maschinenbau GmbH</a>.' });

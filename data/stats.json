@@ -1,0 +1,397 @@
+{
+ "reviewed": 1643,
+ "confirmed": 97,
+ "hit_rate": 0.059,
+ "rounds": [
+  {
+   "round": "r01",
+   "tag": "mines",
+   "listed": 300,
+   "checked": 51,
+   "auto": 0,
+   "confirmed": 4
+  },
+  {
+   "round": "r02",
+   "tag": "quarries",
+   "listed": 500,
+   "checked": 50,
+   "auto": 0,
+   "confirmed": 2
+  },
+  {
+   "round": "r03",
+   "tag": "quarries",
+   "listed": 500,
+   "checked": 129,
+   "auto": 0,
+   "confirmed": 14
+  },
+  {
+   "round": "r04",
+   "tag": "quarries",
+   "listed": 500,
+   "checked": 302,
+   "auto": 0,
+   "confirmed": 11
+  },
+  {
+   "round": "r05",
+   "tag": "atacama",
+   "listed": 500,
+   "checked": 210,
+   "auto": 290,
+   "confirmed": 15
+  },
+  {
+   "round": "r06",
+   "tag": "atacama",
+   "listed": 500,
+   "checked": 229,
+   "auto": 213,
+   "confirmed": 10
+  },
+  {
+   "round": "r07",
+   "tag": "atacama",
+   "listed": 500,
+   "checked": 207,
+   "auto": 197,
+   "confirmed": 17
+  },
+  {
+   "round": "r08",
+   "tag": "chile",
+   "listed": 209,
+   "checked": 179,
+   "auto": 24,
+   "confirmed": 9
+  },
+  {
+   "round": "r09",
+   "tag": "mixed",
+   "listed": 500,
+   "checked": 286,
+   "auto": 165,
+   "confirmed": 15
+  },
+  {
+   "round": "r10",
+   "tag": "chile_all",
+   "listed": 500,
+   "checked": 0,
+   "auto": 0,
+   "confirmed": 0,
+   "open": true
+  }
+ ],
+ "ai_high": {
+  "n": 74,
+  "confirmed": 39,
+  "share": 0.527
+ },
+ "ai_low": {
+  "n": 2243,
+  "confirmed": 17,
+  "share": 0.0076
+ },
+ "ai_high_recent": {
+  "n": 40,
+  "confirmed": 28,
+  "share": 0.7
+ },
+ "auto_clean": 889,
+ "spot_checks": 179,
+ "spot_misses": 0,
+ "growth": [
+  {
+   "round": "r01",
+   "found": 4,
+   "total": 42
+  },
+  {
+   "round": "r02",
+   "found": 6,
+   "total": 44
+  },
+  {
+   "round": "r03",
+   "found": 20,
+   "total": 58
+  },
+  {
+   "round": "r04",
+   "found": 31,
+   "total": 69
+  },
+  {
+   "round": "r05",
+   "found": 46,
+   "total": 84
+  },
+  {
+   "round": "r06",
+   "found": 56,
+   "total": 94
+  },
+  {
+   "round": "r07",
+   "found": 72,
+   "total": 110
+  },
+  {
+   "round": "r08",
+   "found": 80,
+   "total": 118
+  },
+  {
+   "round": "r09",
+   "found": 88,
+   "total": 126
+  }
+ ],
+ "gain": {
+  "n": 2424,
+  "positives": 67,
+  "points": [
+   {
+    "p": 1.01,
+    "x": 0.0,
+    "y": 0.0
+   },
+   {
+    "p": 0.95,
+    "x": 0.0037,
+    "y": 0.0746,
+    "sites": 9,
+    "found": 5
+   },
+   {
+    "p": 0.9,
+    "x": 0.0091,
+    "y": 0.1343,
+    "sites": 22,
+    "found": 9
+   },
+   {
+    "p": 0.85,
+    "x": 0.0202,
+    "y": 0.3881,
+    "sites": 49,
+    "found": 26
+   },
+   {
+    "p": 0.8,
+    "x": 0.0227,
+    "y": 0.4179,
+    "sites": 55,
+    "found": 28
+   },
+   {
+    "p": 0.7,
+    "x": 0.0305,
+    "y": 0.5821,
+    "sites": 74,
+    "found": 39
+   },
+   {
+    "p": 0.6,
+    "x": 0.0375,
+    "y": 0.6716,
+    "sites": 91,
+    "found": 45
+   },
+   {
+    "p": 0.5,
+    "x": 0.0396,
+    "y": 0.6866,
+    "sites": 96,
+    "found": 46
+   },
+   {
+    "p": 0.4,
+    "x": 0.0561,
+    "y": 0.7164,
+    "sites": 136,
+    "found": 48
+   },
+   {
+    "p": 0.3,
+    "x": 0.0747,
+    "y": 0.7463,
+    "sites": 181,
+    "found": 50
+   },
+   {
+    "p": 0.2,
+    "x": 0.1312,
+    "y": 0.8358,
+    "sites": 318,
+    "found": 56
+   },
+   {
+    "p": 0.1,
+    "x": 0.5248,
+    "y": 0.9851,
+    "sites": 1272,
+    "found": 66
+   },
+   {
+    "p": 0.0,
+    "x": 1.0,
+    "y": 1.0,
+    "sites": 2424,
+    "found": 67
+   }
+  ]
+ },
+ "ai_rounds": [
+  {
+   "round": "r04",
+   "flagged": 1,
+   "flagged_real": 0,
+   "positives": 1,
+   "caught": 0
+  },
+  {
+   "round": "r05",
+   "flagged": 26,
+   "flagged_real": 6,
+   "positives": 15,
+   "caught": 8
+  },
+  {
+   "round": "r06",
+   "flagged": 7,
+   "flagged_real": 5,
+   "positives": 10,
+   "caught": 7
+  },
+  {
+   "round": "r07",
+   "flagged": 17,
+   "flagged_real": 13,
+   "positives": 17,
+   "caught": 13
+  },
+  {
+   "round": "r08",
+   "flagged": 8,
+   "flagged_real": 3,
+   "positives": 9,
+   "caught": 5
+  },
+  {
+   "round": "r09",
+   "flagged": 15,
+   "flagged_real": 12,
+   "positives": 15,
+   "caught": 13
+  }
+ ],
+ "scan_tiles": 791,
+ "scan_km2": 9114.4,
+ "scan_ha": 911440,
+ "known_polygons": 205,
+ "known_places": 38,
+ "found_sites": 97,
+ "found_places": 88,
+ "multiple": 2.3,
+ "mines": 138,
+ "found_cells": 87,
+ "candidates": 500,
+ "funnel": {
+  "area_ha": 911440,
+  "tiles": 791,
+  "listed": {
+   "n": 2711,
+   "ha": 5218.6
+  },
+  "human": {
+   "n": 1643,
+   "ha": 3079.5
+  },
+  "confirmed": {
+   "n": 97,
+   "ha": 165.4
+  }
+ },
+ "found_ha": 165.4,
+ "found_full_ha": 46.5,
+ "blind": {
+  "hidden_places": 103,
+  "folds": 4,
+  "list_sites": 11000,
+  "steps": [
+   {
+    "top": 500,
+    "recall": 0.1845,
+    "found": 19,
+    "random": 0.0276
+   },
+   {
+    "top": 2500,
+    "recall": 0.4951,
+    "found": 51,
+    "random": 0.1382
+   }
+  ],
+  "full": {
+   "recall": 0.6117,
+   "found": 63
+  }
+ },
+ "by_size": {
+  "s": {
+   "dump": 2,
+   "partial": 14
+  },
+  "m": {
+   "dump": 9,
+   "partial": 20
+  },
+  "l": {
+   "dump": 12,
+   "partial": 31
+  }
+ },
+ "found_by_how": {
+  "ai": 40,
+  "human": 48
+ },
+ "regions": {
+  "north": {
+   "name": "Norte (Arica - Tarapacá)",
+   "south": -22.6,
+   "north": -17.0,
+   "known": 0,
+   "found": 30,
+   "found_ai": 17,
+   "found_human": 13,
+   "reviewed": 469,
+   "candidates": 204
+  },
+  "atacama": {
+   "name": "Atacama (Antofagasta)",
+   "south": -25.7,
+   "north": -22.6,
+   "known": 38,
+   "found": 32,
+   "found_ai": 13,
+   "found_human": 19,
+   "reviewed": 563,
+   "candidates": 286
+  },
+  "south": {
+   "name": "Sur (Atacama - Coquimbo)",
+   "south": -33.0,
+   "north": -25.7,
+   "known": 0,
+   "found": 26,
+   "found_ai": 10,
+   "found_human": 16,
+   "reviewed": 611,
+   "candidates": 10
+  }
+ }
+}
