@@ -96,6 +96,7 @@
     $("#safeText").textContent = t("safe_text", { auto: nf(s.auto_clean + s.spot_checks), spot: nf(s.spot_checks), miss: nf(s.spot_misses) });
     $("#lowBig").textContent = pct(s.ai_low.share, 1) + " %";
     $("#lowText").textContent = t("low_text", { n: nf(s.ai_low.n), c: nf(s.ai_low.confirmed) });
+    $("#honestText").textContent = t("honest_text", { rate: pct(s.hit_rate, 1) });
     renderBlind(); renderFunnel(); renderSizes(); renderGrowth(); renderGain(); renderAiBars(); renderChart(); renderRegions(); legendState();
   }
   function wrap(txt, n) { const out = []; let cur = ""; txt.split(" ").forEach((w) => { if (cur && (cur + " " + w).length > n) { out.push(cur); cur = w; } else cur = cur ? cur + " " + w : w; }); out.push(cur); return out; }
